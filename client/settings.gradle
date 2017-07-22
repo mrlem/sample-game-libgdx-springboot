@@ -1,0 +1,5 @@
+rootProject.name = "singularity-client"
+
+include 'desktop', 'android', 'ios'/*, 'html'*/, 'core'
+include ':protocol'
+project(':protocol').projectDir = new File(settingsDir, '../engine/protocol')

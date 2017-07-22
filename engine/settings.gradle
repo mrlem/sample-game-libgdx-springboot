@@ -1,0 +1,3 @@
+rootProject.name = 'singularity-engine'
+
+include ":server", ":protocol"
