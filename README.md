@@ -19,8 +19,8 @@ Hope this saves you time to get started: because when an idea comes into your mi
 
 ## What I provide
 
-I provide a set of empty projects combining all these, for a fake game named "**singularity**" (change this name to suite your needs). You'll find:
-* **singularity-client**: the game client project (using LibGDX)
+I provide a set of empty projects combining all these containing the bare minimum to get started, for a fake game named "**singularity**" (change this name to suite your needs). You'll find:
+* **singularity-client**: the game client project (using LibGDX), wth a simple scene2d stage
 * **singularity-engine**: including a **server** module (using SpringBoot) and a **protocol** module (shared with the client)
 
 Tested all this with IDEA IntelliJ, but it should compile & run just as well in command line.
