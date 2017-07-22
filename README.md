@@ -28,4 +28,4 @@ Tested all this with IDEA IntelliJ, but it should compile & run just as well in 
 
 ## What I don't provide
 
-I don't provide any kind of classes / architecture to guide the way you code the came, this is not my point. Use LibGDX & SpringBoot docs for this!
+I don't provide any kind of classes / architecture to guide the way you code the came, this is not my point. Use LibGDX & SpringBoot docs for this! I also chose those libraries because of their excellent documentations.
