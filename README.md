@@ -23,7 +23,7 @@ I provide a set of empty projects combining all these containing the bare minimu
 * **singularity-client**: the game client project (using LibGDX), wth a simple scene2d stage
 * **singularity-engine**: including a **server** module (using SpringBoot) and a **protocol** module (shared with the client)
 
-Tested all this with IDEA IntelliJ, but it should compile & run just as well in command line.
+Tested all this with IDEA IntelliJ and from the command line.
 
 ## How do I run things?
 
