@@ -35,7 +35,7 @@ cd client/desktop
 
 The server:
 ```shell
-cd server
+cd engine/server
 ../gradlew bootRun
 ```
 
