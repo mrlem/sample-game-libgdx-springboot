@@ -28,3 +28,12 @@ Tested all this with IDEA IntelliJ, but it should compile & run just as well in 
 ## What I don't provide
 
 I don't provide any kind of classes / architecture to guide the way you code the came, this is not my point. Use LibGDX & SpringBoot docs for this! I also chose those libraries because of their excellent documentations.
+
+## Credits
+
+A huge thanks for those who provide those marvellous tools to the community:
+* https://kotlinlang.org
+* https://gradle.org/
+* https://projects.spring.io/spring-boot/
+* https://libgdx.badlogicgames.com
+* https://libktx.github.io/
