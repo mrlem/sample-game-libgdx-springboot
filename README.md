@@ -25,6 +25,20 @@ I provide a set of empty projects combining all these containing the bare minimu
 
 Tested all this with IDEA IntelliJ, but it should compile & run just as well in command line.
 
+## How do I run things?
+
+The desktop client:
+```shell
+cd client/desktop
+../gradlew run
+```
+
+The server:
+```shell
+cd server
+../gradlew bootRun
+```
+
 ## What I don't provide
 
 I don't provide any kind of classes / architecture to guide the way you code the came, this is not my point. Use LibGDX & SpringBoot docs for this! I also chose those libraries because of their excellent documentations.
