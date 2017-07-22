@@ -19,7 +19,7 @@ Hope this saves you time to get started: because when an idea comes into your mi
 
 ## What I provide
 
-This projects juste provides an empty template combining all these. You'll find:
+I provide a set of empty projects combining all these, for a fake game named "singularity" (change this name to suite your needs). You'll find:
 * client: the game client project (using LibGDX)
 * engine/server: the server project (using SpringBoot)
 * engine/protocol: the common protocol project
