@@ -4,27 +4,39 @@ import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.GL20
 import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import com.badlogic.gdx.scenes.scene2d.Actor
+import com.badlogic.gdx.scenes.scene2d.Stage
 import ktx.app.KotlinApplication
-import ktx.app.use
+import com.badlogic.gdx.utils.viewport.ScreenViewport
 
 class SingularityGame : KotlinApplication() {
-    lateinit var batch: SpriteBatch
-    lateinit var img: Texture
+
+    lateinit var stage: Stage
+    lateinit var actor: Actor
 
     override fun create() {
         Gdx.app.log("sgn", "launching client...")
 
-        // TODO
-        batch = SpriteBatch()
-        img = Texture("badlogic.jpg")
+        actor = SampleActor()
+
+        stage = Stage(ScreenViewport())
+        stage.addActor(actor)
+        Gdx.input.inputProcessor = stage
+
+        actor.setPosition(60f, 60f)
+    }
+
+    override fun resize(width: Int, height: Int) {
+        stage.viewport.update(width, height, true)
     }
 
     override fun render(delta: Float) {
-        // TODO
-        Gdx.gl.glClearColor(1f, 1f, 0f, 1f)
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
-        batch.use {
-            it.draw(img, 0f, 0f)
-        }
+        stage.act(delta)
+        stage.draw()
+    }
+
+    override fun dispose() {
+        stage.dispose()
     }
 }
