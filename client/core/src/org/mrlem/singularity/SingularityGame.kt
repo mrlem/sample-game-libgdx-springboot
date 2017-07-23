@@ -13,7 +13,7 @@ class SingularityGame : KotlinApplication() {
     lateinit var actor: Actor
 
     override fun create() {
-        Gdx.app.log("sgn", "launching client...")
+        Gdx.app.log("app", "launching client...")
 
         actor = SampleActor()
 
