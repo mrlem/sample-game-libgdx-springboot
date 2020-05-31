@@ -1,4 +1,4 @@
-rootProject.name = "singularity-client"
+rootProject.name = "sample"
 
 include 'desktop', 'android', 'core'
 include 'protocol'

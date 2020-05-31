@@ -1,4 +1,4 @@
-package org.mrlem.singularity
+package org.mrlem.sample
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.graphics.GL20

@@ -1,10 +1,10 @@
-package org.mrlem.singularity
+package org.mrlem.sample
 
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.Screen
 import ktx.app.KtxGame
 
-class SingularityGame : KtxGame<Screen>() {
+class SampleGame : KtxGame<Screen>() {
 
     override fun create() {
         Gdx.app.log("app", "launching client...")
