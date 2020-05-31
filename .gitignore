@@ -63,3 +63,4 @@ build/
 ## OS Specific
 .DS_Store
 build
+client/android/libs/
