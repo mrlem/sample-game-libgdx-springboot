@@ -8,7 +8,12 @@ object DesktopLauncher {
 
     @JvmStatic
     fun main(arg: Array<String>) {
-        val config = LwjglApplicationConfiguration()
+        val mode = LwjglApplicationConfiguration.getDesktopDisplayMode()
+        val config = LwjglApplicationConfiguration().apply {
+            width = mode.width
+            height = mode.height
+            fullscreen = true
+        }
         LwjglApplication(SampleGame(), config)
     }
 

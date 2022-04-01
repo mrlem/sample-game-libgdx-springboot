@@ -8,14 +8,18 @@ import ktx.app.KtxScreen
 
 class SampleScreen : KtxScreen {
 
-    val actor = SampleActor()
-    val stage = Stage(ScreenViewport())
+    // actors
+    private var obstacle = ObstacleActor()
+    private val florian = FlorianActor().apply {
+        obstacleInSight = obstacle
+    }
 
-    init {
-        stage.addActor(actor)
-        Gdx.input.inputProcessor = stage
+    // stage
+    private val stage = Stage(ScreenViewport()).apply {
+        addActor(florian)
+        addActor(obstacle)
 
-        actor.setPosition(60f, 60f)
+        Gdx.input.inputProcessor = this
     }
 
     override fun resize(width: Int, height: Int) {
@@ -23,7 +27,9 @@ class SampleScreen : KtxScreen {
     }
 
     override fun render(delta: Float) {
-        Gdx.gl.glClearColor(0f, 0f, 0.2f, 1f)
+        update()
+
+        Gdx.gl.glClearColor(1.0f, 1.0f, 1.0f, 1f)
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT)
         stage.act(delta)
         stage.draw()
@@ -31,6 +37,22 @@ class SampleScreen : KtxScreen {
 
     override fun dispose() {
         stage.dispose()
+        florian.dispose() // oh!
+        ObstacleActor.disposeAll()
+    }
+
+    private fun update() {
+        // obstacle exits screen?
+        if (obstacle.right <= 0) {
+            obstacle.remove()
+
+            // spawn a new one
+            obstacle = ObstacleActor()
+                .also {
+                    stage.addActor(it)
+                    florian.obstacleInSight = it
+                }
+        }
     }
 
 }
