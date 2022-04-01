@@ -13,7 +13,7 @@ import kotlin.math.roundToInt
 class FlorianActor: Actor(), Disposable {
 
     companion object {
-        private const val SPEED = 0.5f // images per frame
+        private const val SPEED = 30f
         private const val POSITION = 50f
 
         // spritesheet
@@ -50,18 +50,21 @@ class FlorianActor: Actor(), Disposable {
     override fun act(delta: Float) {
         super.act(delta)
 
-        frame += SPEED
-
         // make jump if required
         val distanceToObstacle = obstacleInSight
             ?.let { abs((x + width / 2) - (it.x + it.width / 2)) }
             ?: Float.MAX_VALUE
         y = max(0f, 300 - distanceToObstacle)
+
+        if (y == 0f || frame < 17) {
+            frame += SPEED * delta
+            frame %= regions.size
+        }
     }
 
     override fun draw(batch: Batch, parentAlpha: Float) {
         batch.setColor(color.r, color.g, color.b, color.a * parentAlpha)
-        batch.draw(regions[(frame.roundToInt()) % regions.size], x, y)
+        batch.draw(regions[frame.toInt()], x, y)
     }
 
     override fun dispose() {
