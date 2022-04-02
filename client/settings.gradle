@@ -1,5 +1,0 @@
-rootProject.name = "sample"
-
-include 'desktop', 'android', 'core'
-include 'protocol'
-project(':protocol').projectDir = new File(settingsDir, '../engine/protocol')
