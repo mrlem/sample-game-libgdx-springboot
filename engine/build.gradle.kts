@@ -2,7 +2,7 @@ group = "org.mrlem.sample"
 version = "1.0-SNAPSHOT"
 
 buildscript {
-    val kotlinVersion = "1.6.10"
+    val kotlinVersion = "1.7.10"
 
     repositories {
         mavenCentral()
