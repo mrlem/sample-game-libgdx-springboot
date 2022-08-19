@@ -21,5 +21,6 @@ plugins {
 repositories { mavenCentral() }
 
 dependencies {
+    implementation(project(":protocol"))
     implementation("org.springframework.boot:spring-boot-starter-web")
 }
