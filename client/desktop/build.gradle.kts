@@ -5,12 +5,6 @@ plugins {
 val assetsDir = file("../android/assets")
 val mainClassName = "org.mrlem.sample.desktop.DesktopLauncher"
 
-sourceSets {
-    getByName("main") {
-        resources.srcDirs("../android/assets")
-    }
-}
-
 // Use this task to run the game if IntelliJ run application configuration doesn't work.
 tasks.register<JavaExec>("run") {
     main = mainClassName
